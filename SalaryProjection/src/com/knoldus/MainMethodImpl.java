@@ -16,22 +16,34 @@ import static com.knoldus.learning.design.salary.util.CurrencyConverter.getSalar
 public class MainMethodImpl {
 
     public static void main(String[] args) {
-        List<Employee> list = new ArrayList<>();
-        list.add(new Employee(101, "Deepak", new Contact("7621729576", "xyz12@gmail.com"), DepartmentType.IT, new Salary(CurrencyType.USD, 8000), EmployeeType.Fixed));
-        list.add(new Employee(111, "Prabhat", new Contact("9875699999", "abc34@gmail.com"), DepartmentType.MANAGEMENT, new Salary(CurrencyType.INR, 96000), EmployeeType.Contract));
-        list.add(new Employee(121, "Krishna", new Contact("7885009312", "krish@gmail.com"), DepartmentType.HR, new Salary(CurrencyType.EURO, 7500), EmployeeType.Fixed));
-        list.add(new Employee(131, "Vasudev", new Contact("8575600996", "vas12@gmail.com"), DepartmentType.FINANCE, new Salary(CurrencyType.INR, 95000), EmployeeType.PartTime));
-        list.add(new Employee(145, "Yaadav", new Contact("8875695299", "yad21@gmail.com"), DepartmentType.MANAGEMENT, new Salary(CurrencyType.YEN, 5500), EmployeeType.Contract));
-        list.add(new Employee(191, "Sankata", new Contact("8556521420", "san66@gmail.com"), DepartmentType.HR, new Salary(CurrencyType.EURO, 57000), EmployeeType.Fixed));
-        list.add(new Employee(161, "Gajodhar", new Contact("8552145600", "gaj65@gmail.com"), DepartmentType.FINANCE, new Salary(CurrencyType.INR, 76500), EmployeeType.PartTime));
-        list.add(new Employee(151, "Birju", new Contact("8820145256", "brj52@gmail.com"), DepartmentType.IT, new Salary(CurrencyType.USD, 86000), EmployeeType.Contract));
+        
 
+    List<Employee> employeeList = new ArrayList<>();
+    List<Employee> employeeListWithSalaryMoreThanTheRange;
+    employeeList.add(new Employee(1, "KRISHNA", new Contact("9621729578", "krishna@gmail.com"),
+            DepartmentType.IT, new Salary(CurrencyType.INR,
+            8000), EmployeeType.FullTime));
+    employeeList.add(new Employee(2, "PRATIBHA", new Contact("9808976786", "pratibha@gmail.com"),
+            DepartmentType.HR, new Salary(CurrencyType.USD,
+            6000), EmployeeType.PartTime));
+    employeeList.add(new Employee(3, "SHASHIKANT", new Contact("79786548799", "shashikant@gmail.com"),
+            DepartmentType.IT, new Salary(CurrencyType.USD,
+            5000), EmployeeType.FullTime));
+    employeeList.add(new Employee(4, "NAMAN", new Contact("9878656786", "shakti@gmail.com"),
+            DepartmentType.IT, new Salary(CurrencyType.INR,
+            7800), EmployeeType.FullTime));
 
-        List<Employee> employeeListWithSalaryMoreThanTheRange = list.stream().peek(System.out::println).filter(t -> getSalaryInBaseCurrency(t) >= 5000.0).peek(System.out::println).collect(Collectors.toList());
+    employeeListWithSalaryMoreThanTheRange = employeeList.stream().
+            peek(System.out::println).
+            filter(t -> getSalaryInBaseCurrency(t) >= 5000.0).
+            peek(System.out::println).
+            collect(Collectors.toList());
+//        double salaryInBaseCurrency = getSalaryInBaseCurrency(list.get(0));
 
-        System.out.println("Employee whose salary is greater than 5000 are");
-        for (Employee employee : employeeListWithSalaryMoreThanTheRange) {
-            System.out.println("Name is = " + employee.getName() + " Salary is = " + getSalaryInBaseCurrency(employee));
-        }
-        }
+    System.out.println("Employee whose salary is greater than 5000 are");
+    for(Employee employee : employeeListWithSalaryMoreThanTheRange) {
+        System.out.println("Name is = " + employee.getName() + " Salary is = " + getSalaryInBaseCurrency(employee));
+    }
+}
+
 }
