@@ -20,16 +20,22 @@ public class MainMethodImpl {
 
     List<Employee> employeeList = new ArrayList<>();
     List<Employee> employeeListWithSalaryMoreThanTheRange;
-    employeeList.add(new Employee(1, "KRISHNA", new Contact("9621729578", "krishna@gmail.com"),
+    employeeList.add(new Employee(1, "KRISHNA JAISWAL", new Contact("9621729578", "Jaiswalk526@gmail.com"),
             DepartmentType.IT, new Salary(CurrencyType.INR,
             8000), EmployeeType.FullTime));
-    employeeList.add(new Employee(2, "PRATIBHA", new Contact("9808976786", "pratibha@gmail.com"),
+    employeeList.add(new Employee(2, "PRATIBHA YADAV", new Contact("9808976786", "pratibha@gmail.com"),
             DepartmentType.HR, new Salary(CurrencyType.USD,
             6000), EmployeeType.PartTime));
-    employeeList.add(new Employee(3, "SHASHIKANT", new Contact("79786548799", "shashikant@gmail.com"),
+    employeeList.add(new Employee(3, "SHASHIKANT TANTI", new Contact("79786548799", "shashikant@gmail.com"),
             DepartmentType.IT, new Salary(CurrencyType.USD,
             5000), EmployeeType.FullTime));
-    employeeList.add(new Employee(4, "NAMAN", new Contact("9878656786", "shakti@gmail.com"),
+    employeeList.add(new Employee(4, "SHAKTI JAISWAL", new Contact("9621729578", "shakti@gmail.com"),
+            DepartmentType.IT, new Salary(CurrencyType.INR,
+            7800), EmployeeType.FullTime));
+    employeeList.add(new Employee(4, "AMIT YADAV", new Contact("9878656786", "amityadav@gmail.com"),
+            DepartmentType.IT, new Salary(CurrencyType.INR,
+            7800), EmployeeType.FullTime));
+    employeeList.add(new Employee(4, "SHAKTI JAISWAL", new Contact("6387826567", "shaktijaiswal@gmail.com"),
             DepartmentType.IT, new Salary(CurrencyType.INR,
             7800), EmployeeType.FullTime));
 
@@ -40,6 +46,7 @@ public class MainMethodImpl {
             collect(Collectors.toList());
 //        double salaryInBaseCurrency = getSalaryInBaseCurrency(list.get(0));
 System.out.println("Employee whose salary is greater than 5000 are");
+    System.out.println("Employee whose salary is greater than 5000 are");
     System.out.println("Employee whose salary is greater than 5000 are");
     for(Employee employee : employeeListWithSalaryMoreThanTheRange) {
         System.out.println("Name is = " + employee.getName() + " Salary is = " + getSalaryInBaseCurrency(employee));
