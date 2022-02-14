@@ -1,4 +1,4 @@
-package com.knoldus;
+
 import com.knoldus.learning.design.salary.entity.Contact;
 import com.knoldus.learning.design.salary.entity.Employee;
 import com.knoldus.learning.design.salary.entity.Salary;
@@ -13,7 +13,7 @@ import static com.knoldus.learning.design.salary.util.CurrencyConverter.getSalar
 /**
  * main method implemented
  */
-public class MainMethodImpl {
+public class MainImpl {
 
     public static void main(String[] args) {
         
@@ -24,7 +24,7 @@ public class MainMethodImpl {
             DepartmentType.IT, new Salary(CurrencyType.INR,
             8000), EmployeeType.FullTime));
     employeeList.add(new Employee(2, "PRATIBHA", new Contact("9808976786", "pratibha@gmail.com"),
-            DepartmentType.HR, new Salary(CurrencyType.USD,
+            DepartmentType.IT, new Salary(CurrencyType.USD,
             6000), EmployeeType.PartTime));
     employeeList.add(new Employee(3, "SHASHIKANT", new Contact("79786548799", "shashikant@gmail.com"),
             DepartmentType.IT, new Salary(CurrencyType.USD,
@@ -39,7 +39,7 @@ public class MainMethodImpl {
             peek(System.out::println).
             collect(Collectors.toList());
 //        double salaryInBaseCurrency = getSalaryInBaseCurrency(list.get(0));
-System.out.println("Employee whose salary is greater than 5000 are");
+
     System.out.println("Employee whose salary is greater than 5000 are");
     for(Employee employee : employeeListWithSalaryMoreThanTheRange) {
         System.out.println("Name is = " + employee.getName() + " Salary is = " + getSalaryInBaseCurrency(employee));
