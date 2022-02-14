@@ -1,5 +1,7 @@
 package com.knoldus.learning.design.salary.type;
 
-public enum EmployeeType {
 
+public enum EmployeeType {
+    FullTime,
+    PartTime;
 }
